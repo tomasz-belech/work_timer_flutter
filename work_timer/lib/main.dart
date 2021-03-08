@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:work_timer/widgets.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,11 +43,7 @@ class TimerHomePage extends StatelessWidget {
            Padding(padding: EdgeInsets.all(defaultPadding),),
           ],
         ),
-        Row(
-          children:[
-            Expanded(child: Text("Hello")),
-          ],
-        ),
+        CircularPercentIndicator(radius: 200,),
         Row(children: [
           Padding(padding: EdgeInsets.all(defaultPadding),),
           Expanded(child: ProductivityButton(color: Color(0xff212121), text: 'Stop', size: null, onPressed: emptyMethod),),
